@@ -1,0 +1,34 @@
+{
+  "crystal_structure": {
+    "atomic_positions": [
+      {
+        "wyckoff": "2d",
+        "element": "Mo",
+        "a": "2/3",
+        "b": "1/3",
+        "c": "1/4"
+      },
+      {
+        "wyckoff": "4f",
+        "element": "S",
+        "a": "2/3",
+        "b": "1/3",
+        "c": "0.633082"
+      }
+    ],
+    "symmetry": {
+      "crystal_system": "Hexagonal",
+      "lattice_system": "Hexagonal",
+      "hall_number": "-P 6c 2c",
+      "international_number": 194,
+      "symbol": "P6₃/mmc",
+      "point_group": "6/mmm"
+    },
+    "structure_meta": {
+      "number_of_atoms": 6,
+      "density": "4.50 g·cm⁻³",
+      "dimensionality": "",
+      "possible_oxidation_states": "Mo⁴⁺, S²⁻"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+&CONTROL
+calculation   = 'vc-relax'
+restart_mode  = 'from_scratch'
+pseudo_dir    = '/public3/home/a2s002871/MoS2/pseudo/'
+outdir        = './tmp/'
+prefix        = 'MoS2'
+etot_conv_thr = 1.0D-5
+forc_conv_thr = 1.0D-4
+/
+&SYSTEM
+ibrav         = 4
+a             = 3.2      ! 初始面内晶格常数 a (约 3.19 埃，单位是 Bohr)
+c             = 15
+nat           = 3
+ntyp          = 2
+occupations   = 'smearing'
+smearing      = 'gaussian'
+degauss       = 0.01
+ecutwfc       = 50.0
+ecutrho       = 400.0
+/
+&ELECTRONS
+mixing_beta   = 0.3
+conv_thr      = 1.0D-8
+electron_maxstep = 200
+/
+&IONS
+ion_dynamics  = 'bfgs'
+/
+&CELL
+cell_dynamics = 'bfgs'
+press         = 0.0
+cell_dofree   = '2Dxy'
+/
+ATOMIC_SPECIES
+Mo  95.94  Mo.pbe-spn-rrkjus_psl.1.0.0.UPF
+S   32.06  S.pbe-n-rrkjus_psl.1.0.0.UPF
+ATOMIC_POSITIONS (crystal)
+Mo       0.333333333   0.666666667   0.500000000
+S        0.666666667   0.333333333   0.584619789
+S        0.666666667   0.333333333   0.415380211
+K_POINTS(automatic)
+9 9 1 0 0 0

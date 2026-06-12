@@ -1,0 +1,49 @@
+&CONTROL
+    calculation   = 'vc-relax'      ! 指定计算类型为变胞形变弛豫
+    restart_mode  = 'from_scratch'
+    prefix        = 'mos2'          ! 输出文件的前缀名
+    outdir        = './tmp/'        ! 临时文件存放路径
+    pseudo_dir    = '/public3/home/a2s002871/MoS2/pseudo/'     ! 赝势文件存放路径
+    etot_conv_thr = 1.0d-5          ! 总能量的收敛阈值
+    forc_conv_thr = 1.0d-4          ! 力的收敛阈值
+    
+/
+
+&SYSTEM
+    ibrav       = 4                 ! 4 代表六方晶系 (Hexagonal)
+    a           = 3.2               ! 初始面内晶格常数 a (约 3.19 埃，单位是 Bohr)
+    c           = 15                ! c/a 的比例。对应的 c = 6.0282 * 4.7022 = 28.34 Bohr (约 15 埃)
+    nat         = 3                 ! 胞内原子总数：1个Mo，2个S
+    ntyp        = 2                 ! 原子种类：2种
+    occupations = 'smearing'        ! 开启展宽，防止过渡金属 Mo 电子步不收敛
+    smearing    = 'gaussian'
+    degauss     = 0.01
+    ecutwfc     = 50.0              ! 平面波截断能 (根据你的赝势来调，一般 50-60 Ry)
+    ecutrho     = 400.0             ! 电荷密度截断能 (一般是 ecutwfc 的 8 到 10 倍)
+/
+&ELECTRONS
+    conv_thr         = 1.0d-8       ! 电子步自洽收敛阈值
+    mixing_beta      = 0.3          ! 调低混叠系数（默认 0.7 太高容易电荷振荡不收敛）
+    electron_maxstep = 200          ! 给够迭代步数，防止 100 步断掉
+/
+
+&IONS
+    ion_dynamics = 'bfgs'           ! 离子弛豫算法，默认 bfgs 最稳
+/
+
+&CELL
+    cell_dynamics = 'bfgs'          ! 晶胞弛豫算法
+    press         = 0.0             ! 目标外部压力为 0 帕（模拟无外加应变的理想环境）
+    cell_dofree   = '2Dxy'          ! 🔥核心关键！因为是单层二维材料，只允许 x 和 y 方向优化，锁死 z 轴真空层！
+/
+ATOMIC_SPECIES
+   Mo  95.94   Mo.pbe-spn-rrkjus_psl.1.0.0.UPF
+   S   32.06   S.pbe-n-rrkjus_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS (crystal)
+Mo       0.333333333   0.666666667   0.500000000
+S        0.666666667   0.333333333   0.584619789
+S        0.666666667   0.333333333   0.415380211
+
+K_POINTS (automatic)
+  9 9 1   0 0 0                     ! 二维材料的 Z 方向 K 点雷打不动必须是 1
