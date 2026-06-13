@@ -1,0 +1,41 @@
+{
+  "crystal_structure": {
+    "atomic_positions": [
+      {
+        "wyckoff": "3a",
+        "element": "Mo",
+        "a": "2/3",
+        "b": "1/3",
+        "c": "0.333108"
+      },
+      {
+        "wyckoff": "3a",
+        "element": "S",
+        "a": "1/3",
+        "b": "2/3",
+        "c": "0.079597"
+      },
+      {
+        "wyckoff": "3a",
+        "element": "S",
+        "a": "0",
+        "b": "0",
+        "c": "0.253296"
+      }
+    ],
+    "symmetry": {
+      "crystal_system": "Trigonal",
+      "lattice_system": "Rhombohedral",
+      "hall_number": "R 3 -2\"",
+      "international_number": 160,
+      "symbol": "R3m",
+      "point_group": "3m"
+    },
+    "structure_meta": {
+      "number_of_atoms": 9,
+      "density": "4.67 g·cm⁻³",
+      "dimensionality": "",
+      "possible_oxidation_states": "Mo⁴⁺, S²⁻"
+    }
+  }
+}
