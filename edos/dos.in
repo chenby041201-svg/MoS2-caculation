@@ -1,0 +1,5 @@
+&DOS
+outdir = './tmp/'
+prefix = 'mos2'
+fildos = 'mos2.dos'
+/

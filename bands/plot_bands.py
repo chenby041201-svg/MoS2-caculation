@@ -36,7 +36,7 @@ plt.ylim (-20, 20)
 plt.xticks([gG1, K, M, gG2], [r'$\Gamma$', 'K', 'M', r'$\Gamma$'])
 # Hide x-axis minor ticks
 plt.tick_params(axis='x', which='minor', bottom=False, top=False)
-plt.ylim(-4, 4)
+plt.ylim(-20, 20)
 # Save figure to the pdf file
 plt.savefig('plot-bands.pdf')
 # Show figure
