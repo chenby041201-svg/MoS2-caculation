@@ -1,0 +1,102 @@
+
+     Program Q2R v.7.0 starts on 15Jun2026 at 21:44:49 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI & OpenMP), running on      64 processor cores
+     Number of MPI processes:                16
+     Threads/MPI process:                     4
+
+     MPI processes distributed on     1 nodes
+     R & G space division:  proc/nbgrp/npool/nimage =      16
+     231759 MiB available memory on the printing compute node when the environment starts
+ 
+
+     reading grid info from file mos2.dyn0    
+  reading force constants from file mos2.dyn1
+ macroscopic fields = T
+   5.11323   0.00000   0.00000
+   0.00000   5.11323   0.00000
+   0.00000   0.00000   1.25951
+  na=            1
+  -1.41213   0.00000   0.00000
+   0.00000  -1.41213   0.00000
+   0.00000   0.00000  -0.08582
+  na=            2
+   0.72268   0.00000   0.00000
+   0.00000   0.72268   0.00000
+   0.00000   0.00000   0.04911
+  na=            3
+   0.72268   0.00000   0.00000
+   0.00000   0.72268   0.00000
+   0.00000   0.00000   0.04911
+Norm of the difference between old and new effective charges:    0.02806589606582991434
+  nqs=            1
+ q=   0.00000000  0.00000000  0.00000000
+  reading force constants from file mos2.dyn2
+  nqs=            6
+ q=   0.00000000  0.19245009  0.00000000
+ q=   0.00000000 -0.19245009  0.00000000
+ q=   0.16666667 -0.09622504  0.00000000
+ q=  -0.16666667  0.09622504  0.00000000
+ q=  -0.16666667 -0.09622504  0.00000000
+ q=   0.16666667  0.09622504  0.00000000
+  reading force constants from file mos2.dyn3
+  nqs=            6
+ q=   0.00000000  0.38490018  0.00000000
+ q=   0.00000000 -0.38490018  0.00000000
+ q=   0.33333333 -0.19245009  0.00000000
+ q=  -0.33333333  0.19245009  0.00000000
+ q=  -0.33333333 -0.19245009  0.00000000
+ q=   0.33333333  0.19245009  0.00000000
+  reading force constants from file mos2.dyn4
+  nqs=            3
+ q=   0.00000000 -0.57735027  0.00000000
+ q=  -0.50000000  0.28867514  0.00000000
+ q=   0.50000000  0.28867514  0.00000000
+  reading force constants from file mos2.dyn5
+  nqs=            6
+ q=   0.16666667  0.28867514  0.00000000
+ q=  -0.16666667  0.28867514  0.00000000
+ q=   0.16666667 -0.28867514  0.00000000
+ q=  -0.33333333  0.00000000  0.00000000
+ q=  -0.16666667 -0.28867514  0.00000000
+ q=   0.33333333  0.00000000  0.00000000
+  reading force constants from file mos2.dyn6
+  nqs=           12
+ q=   0.16666667  0.48112522  0.00000000
+ q=  -0.16666667 -0.48112522  0.00000000
+ q=  -0.16666667  0.48112522  0.00000000
+ q=   0.16666667 -0.48112522  0.00000000
+ q=   0.33333333 -0.38490018  0.00000000
+ q=  -0.33333333  0.38490018  0.00000000
+ q=  -0.50000000 -0.09622504  0.00000000
+ q=   0.50000000  0.09622504  0.00000000
+ q=  -0.33333333 -0.38490018  0.00000000
+ q=   0.33333333  0.38490018  0.00000000
+ q=   0.50000000 -0.09622504  0.00000000
+ q=  -0.50000000  0.09622504  0.00000000
+  reading force constants from file mos2.dyn7
+  nqs=            2
+ q=   0.33333333  0.57735027  0.00000000
+ q=  -0.33333333  0.57735027  0.00000000
+
+      q-space grid ok, #points =   36
+
+      fft-check warning: sum of imaginary terms = 7.762422E-11
+ 
+     Q2R          :      0.03s CPU      0.22s WALL
+
+ 
+   This run was terminated on:  21:44:49  15Jun2026            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=
